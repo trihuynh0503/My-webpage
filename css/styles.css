@@ -1,0 +1,249 @@
+/* Four main colors for our design:
+    #a7efe9
+    #7fdfd4
+    #fbe1b6
+    #fbac91
+/*this link to use Cherry Bomb One font*/
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+body {
+    margin: 0px;
+    min-height: 100vh;
+    font-family: 'Bree Serif', serif;
+
+}
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #A7EFE9;
+    margin: 0;
+    text-align: center;
+    padding: 20px 0px;
+}
+.sectionHeader {
+    margin-top: 0px;
+}
+.centered-content {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+header h1 {
+    margin: 0px;
+}
+header img {
+    max-width: 20rem;
+}
+.links {
+    font-family: "Times New Roman", Times, serif; 
+}
+.link-button {
+    margin: 0px 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fbac91;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+    width: 100px;
+    border-radius: 25px;
+}
+.link-button:hover {
+    background-color: #f9865f;
+}
+footer {
+    background-color: #fbac91;
+    padding: 20px;
+    height: 75px;
+}
+hr {
+    margin: 10px 15px;
+    border-top: 2px solid #000;
+}
+#info {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+#aboutMe {
+    flex-basis: 65%; 
+    padding: 5px 10px;
+}
+#basicInfo {
+    flex-basis: 35%;
+    padding: 5px 10px;
+
+}
+/* Animation for appearing effect */
+#InfoContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 0px;
+}
+.InfoLeft {
+    flex-basis: 1;
+    font-weight: bold;
+    margin-top: 0px;
+}
+.InfoRight {
+    flex-basis: 1;
+    flex-direction: column;
+    
+}
+.columnTop {
+    margin-top: 0px;
+}
+.row {
+    padding: 5px;
+}
+#education {
+    padding: 10px;
+    
+}
+.certCard {
+    display: flex;
+    margin: 15px 0px;
+}
+.certificate {
+    width: 30%;
+    max-width: 250px;
+    min-width: 100px;
+    background-color: #fbac91;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+.certInfo {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 10px 5px 20px #D3D3D3;
+}
+#contactMe {
+    background-color:#A7EFE9;
+    padding: 5px 10px;
+}
+
+#contactMe h2 {
+    text-align: center;
+}
+
+.inputForm {
+    padding: 5px 20px;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inputForm > label {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.inputForm input[type="text"],
+.inputForm input[type="email"] {
+    font-family: 'Bree Serif', serif;
+    width: 100%;
+    box-sizing: border-box;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+select[name="rating"] {
+    font-family: 'Bree Serif', serif;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.inputForm input[type="submit"] {
+    text-align: center;
+    background-color: #fbac91;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    height: 40px;
+    font-size: 100%;
+}
+.submit-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+.inputForm input[type="submit"]:hover {
+    background-color: #f9865f;
+} 
+.inputForm textarea {
+    font-family: 'Bree Serif', serif;
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px; 
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#contactRea {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#HourlyRateDiv {
+    display: none;
+}
+
+.contact-reason-label {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 70%;
+    }
+    header img {
+        max-width: 50%;
+    }
+    .link-button {
+        width: 75px;
+    }
+    #info { 
+        flex-direction: column;
+    }  
+    .inputForm textarea, .inputForm input[type="text"],
+    .inputForm input[type="email"] {
+        font-size: 95%;
+        height: 25px;
+    }
+    .inputForm input[type="submit"] {
+        height: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 70%;
+    }
+    header img {
+        max-width: 50%;
+    }
+    .link-button {
+        width: 75px;
+    }
+    #info { 
+        flex-direction: column;
+    }  
+    .inputForm textarea, .inputForm input[type="text"],
+    .inputForm input[type="email"] {
+        font-size: 95%;
+        height: 25px;
+    }
+    .inputForm input[type="submit"] {
+        height: 30px;
+    }
+}
