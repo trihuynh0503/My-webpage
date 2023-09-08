@@ -80,7 +80,7 @@ hr {
 /* Animation for appearing effect */
 #InfoContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: nowrap;
     margin-top: 0px;
 }
