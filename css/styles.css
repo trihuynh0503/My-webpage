@@ -64,39 +64,115 @@ hr {
     border-top: 2px solid #000;
 }
 #info {
+    padding: 10px;
+    display
+}
+#info > h2 {
+    grid-column: 1 / 3;
+}
+#info .info-container {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    flex-direction: row;
 }
-#aboutMe {
-    flex-basis: 65%; 
-    padding: 5px 10px;
-}
-#basicInfo {
-    flex-basis: 35%;
-    padding: 5px 10px;
-
-}
-/* Animation for appearing effect */
-#InfoContainer {
+.constr,
+.coding {
+    width: 50%;
+    position: relative;
+    background-size: cover;
+    min-height: 25rem;
+    padding: 2rem;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin-top: 0px;
 }
-.InfoLeft {
-    flex-basis: 1;
-    font-weight: bold;
-    margin-top: 0px;
-}
-.InfoRight {
-    flex-basis: 1;
-    flex-direction: column;
+.constr {
+    background-image: url("../assets/c-dustin-91AQt9p4Mo8-unsplash.jpg");
     
 }
-.columnTop {
-    margin-top: 0px;
+.coding {
+    background-image: url("../assets/christopher-gower-m_HRfLhgABo-unsplash.jpg"); 
 }
+.constr > .text,
+.coding > .text {
+    background-color: rgba(255, 255, 255, 0.80);
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.text > img {
+    width: 4.5rem;
+}
+.constr > .credit,
+.coding > .credit {
+    color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    
+}
+.credit a {
+    color: rgba(255, 255, 255, 0.75);
+}
+.info-pictures {
+    position: relative;
+    min-width: 400px;
+    width: 40%;
+    min-height: 500px;
+    background-image: url("../assets/construction.jpg"), url("../assets/coding.jpg");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+}
+.info-pictures > .logo {
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    top: 200px;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.logo > img {
+    width: 4.5rem;
+}
+
+
+.info-pictures > .constr-credit,
+.info-pictures > .cod-credit {
+    color: rgba(255, 255, 255, 0.95);
+    width: 50%;
+    box-sizing: border-box;
+    padding: 8px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+.info-pictures > .cod-credit {
+    right: 0px; 
+}
+
+.constr-credit > a,
+.cod-credit > a {
+    color: rgba(255, 255, 255, 0.80);
+}
+#info .info-text {
+    padding: 10px;
+    font-size: 110%;
+    width: 50%;
+}
+
 .row {
     padding: 5px;
 }
@@ -107,15 +183,22 @@ hr {
 .certCard {
     display: flex;
     margin: 15px 0px;
+    min-height: 150px;
 }
 .certificate {
     width: 30%;
     max-width: 250px;
     min-width: 100px;
-    background-color: #fbac91;
+    background-size: cover;
     padding: 10px;
     justify-content: center;
     text-align: center;
+}
+.certCard:first-child > .certificate {
+    background-image: url("../assets/coding.jpg");
+}
+.certificate:first-child + {
+    background-image: url("../assets/construction.jpg");
 }
 .certInfo {
     width: 100%;
@@ -124,7 +207,7 @@ hr {
 }
 #contactMe {
     background-color:#A7EFE9;
-    padding: 5px 10px;
+    padding: 10px 10px;
 }
 
 #contactMe h2 {
@@ -157,7 +240,7 @@ select[name="rating"] {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.inputForm input[type="submit"] {
+.inputForm button[type="submit"] {
     text-align: center;
     background-color: #fbac91;
     color: black;
@@ -169,13 +252,13 @@ select[name="rating"] {
     border-radius: 25px;
     height: 40px;
     font-size: 100%;
-}
-.submit-wrapper {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: center;
-    margin-bottom: 0.75rem;
 }
-.inputForm input[type="submit"]:hover {
+
+.inputForm button[type="submit"]:hover {
     background-color: #f9865f;
 } 
 .inputForm textarea {
@@ -226,6 +309,20 @@ select[name="rating"] {
 }
 
 @media (max-width: 600px) {
+    #info .info-container {
+        flex-flow: column;
+    }
+    .constr,
+    .coding {
+        width: auto;
+        min-height: auto;
+        background-size: cover;
+    }
+    .constr .text,
+    .coding .text {
+        height: auto;
+        
+    }
     body {
         font-size: 70%;
     }
