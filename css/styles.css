@@ -127,8 +127,7 @@ hr {
     padding: 5px;
 }
 #education {
-    padding: 10px;
-    
+    padding: 10px; 
 }
 .certCard {
     display: grid;
@@ -272,10 +271,6 @@ select[name="rating"] {
     }
     .info-pictures {
         display: none;
-    }
-    #info .info-text {
-        width: 100%;
-        padding: 10px 0;
     }
 }
 @media (max-width: 600px) {
