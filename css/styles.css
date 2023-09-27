@@ -65,67 +65,21 @@ hr {
 }
 #info {
     padding: 10px;
-    display
+    display: flex;
+    flex-flow: row;
 }
 #info > h2 {
-    grid-column: 1 / 3;
-}
-#info .info-container {
-    display: flex;
-    flex-direction: row;
-}
-.constr,
-.coding {
-    width: 50%;
-    position: relative;
-    background-size: cover;
-    min-height: 25rem;
-    padding: 2rem;
-    display: flex;
-}
-.constr {
-    background-image: url("../assets/c-dustin-91AQt9p4Mo8-unsplash.jpg");
-    
-}
-.coding {
-    background-image: url("../assets/christopher-gower-m_HRfLhgABo-unsplash.jpg"); 
-}
-.constr > .text,
-.coding > .text {
-    background-color: rgba(255, 255, 255, 0.80);
-    height: 100%;
-    box-sizing: border-box;
-    padding: 1.5rem;
-    border-radius: 10px;
-    font-size: 110%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 0 0 auto;
+    flex: 1;
     position: relative;
 }
-.text > img {
-    width: 4.5rem;
-}
-.constr > .credit,
-.coding > .credit {
-    color: rgba(255, 255, 255, 0.75);
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    text-align: center;
-    
-}
-.credit a {
-    color: rgba(255, 255, 255, 0.75);
-}
+.phoneAboutLogo {
+    display: none;
+}    
 .info-pictures {
     position: relative;
     min-width: 400px;
-    width: 40%;
-    min-height: 500px;
+    max-height: 700px;
     background-image: url("../assets/construction.jpg"), url("../assets/coding.jpg");
     background-position: top left, bottom right;
     background-repeat: no-repeat;
@@ -148,7 +102,6 @@ hr {
     width: 4.5rem;
 }
 
-
 .info-pictures > .constr-credit,
 .info-pictures > .cod-credit {
     color: rgba(255, 255, 255, 0.95);
@@ -168,9 +121,10 @@ hr {
     color: rgba(255, 255, 255, 0.80);
 }
 #info .info-text {
-    padding: 10px;
+    padding: 0 10px;
     font-size: 110%;
-    width: 50%;
+    display: flex;
+    flex-flow: column;
 }
 
 .row {
@@ -181,25 +135,48 @@ hr {
     
 }
 .certCard {
-    display: flex;
+    display: grid;
+    grid-template-columns: 250px 1fr;
     margin: 15px 0px;
     min-height: 150px;
 }
-.certificate {
-    width: 30%;
-    max-width: 250px;
-    min-width: 100px;
+/* .certificate {
+    height: 300px;
+} */
+.constr,
+.coding {
+    position: relative;
     background-size: cover;
-    padding: 10px;
-    justify-content: center;
+    height: 12rem;
+    padding: 2rem;
+    display: flex;
+}
+.constr {
+    background-image: url("../assets/ed-cons.jpg");
+}
+.coding {
+    background-image: url("../assets/ed-cod.jpg"); 
+}
+.constr > .credit,
+.coding > .credit {
+    color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
     text-align: center;
 }
-.certCard:first-child > .certificate {
+.credit a {
+    color: rgba(255, 255, 255, 0.75);
+}
+/* .certCard:first-child > .certificate {
     background-image: url("../assets/coding.jpg");
 }
 .certificate:first-child + {
     background-image: url("../assets/construction.jpg");
-}
+} */
 .certInfo {
     width: 100%;
     padding: 10px;
@@ -284,47 +261,36 @@ select[name="rating"] {
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
-
-@media (max-width: 400px) {
-    body {
-        font-size: 70%;
+@media (max-width: 800px) {
+    .phoneAboutLogo {
+        display: flex;
+        gap: 10px;
+        flex-flow: row;
+        justify-content: center;
     }
-    header img {
-        max-width: 50%;
+    .phoneAboutLogo > img {
+        width: 4rem;
     }
-    .link-button {
-        width: 75px;
+    .info-pictures {
+        display: none;
     }
-    #info { 
-        flex-direction: column;
-    }  
-    .inputForm textarea, .inputForm input[type="text"],
-    .inputForm input[type="email"] {
-        font-size: 95%;
-        height: 25px;
-    }
-    .inputForm input[type="submit"] {
-        height: 30px;
+    #info .info-text {
+        width: 100%;
+        padding: 10px 0;
     }
 }
-
 @media (max-width: 600px) {
-    #info .info-container {
-        flex-flow: column;
+    .certCard {
+        display: block;
     }
+    
     .constr,
     .coding {
-        width: auto;
-        min-height: auto;
-        background-size: cover;
+        display: none;
     }
-    .constr .text,
-    .coding .text {
-        height: auto;
-        
-    }
+
     body {
-        font-size: 70%;
+        font-size: 90%;
     }
     header img {
         max-width: 50%;
