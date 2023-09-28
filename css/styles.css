@@ -64,18 +64,20 @@ hr {
     border-top: 2px solid #000;
 }
 #info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    padding: 0 10px;
 }
 
 .phoneAboutLogo {
     display: none;
+    padding-bottom: 10px;
 }    
 .info-pictures {
     position: relative;
-    min-width: 400px;
-    max-width: 800px;
-    height: 450px;
+    min-width: 350px;
+    max-width: 600px;
+    width: 50%;
+    height: 500px; 
     background-image: url("../assets/construction.jpg"), url("../assets/coding.jpg");
     background-position: top left, bottom right;
     background-repeat: no-repeat;
@@ -119,6 +121,8 @@ hr {
 #info .info-text {
     padding: 0 10px;
     font-size: 110%;
+    max-width: 600px;
+    width: 50%;
     display: flex;
     flex-flow: column;
 }
@@ -256,6 +260,7 @@ select[name="rating"] {
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
+
 @media (max-width: 800px) {
     .phoneAboutLogo {
         display: flex;
