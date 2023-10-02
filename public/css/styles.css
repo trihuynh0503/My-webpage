@@ -123,8 +123,7 @@ hr {
     font-size: 110%;
     max-width: 600px;
     width: 50%;
-    display: flex;
-    flex-flow: column;
+    box-sizing: border-box;
 }
 
 .row {
@@ -180,6 +179,7 @@ hr {
     width: 100%;
     padding: 10px;
     box-shadow: 10px 5px 20px #D3D3D3;
+    box-sizing: border-box;
 }
 #contactMe {
     background-color:#A7EFE9;
@@ -276,6 +276,11 @@ select[name="rating"] {
     }
     .info-pictures {
         display: none;
+    }
+    #info .info-text {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
     }
 }
 @media (max-width: 600px) {
