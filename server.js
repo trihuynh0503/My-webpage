@@ -3,7 +3,8 @@ const path = require('path');
 const app = express(); // obtain the "app" object
 const HTTP_PORT = process.env.PORT || 8080; // assign a port
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname, 'views/index.html'));
