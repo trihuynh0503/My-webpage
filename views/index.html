@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Me</title>
+        <title>My Webpage</title>
         <script src="js/script.js"></script>
+        <script defer src="js/app.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <!--Add a link to connect to animate.style-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -12,6 +13,7 @@
     <body>
         <!--Intro in the header-->
         <header>
+            
             <!--An image of me-->
             <div>
                 <img src="/assets/kitty.png">
@@ -31,20 +33,20 @@
             </div>
         </header>
         <main>
-            <div >
+            <div id="info" class="hidden">
                     <!--About Me-->
                 <h2 style="padding: 0px 10px;">About Me</h2>
                 <div class="phoneAboutLogo">
                     <img src="./assets/hook.png" alt="Construction">
                     <img src="./assets/arrow-right.png" alt=" to ">
-                    <img src="./assets/data.png" alt="">
+                    <img src="./assets/data.png" alt="Computer">
                 </div>
-                <div id="info">
+                <div class="aboutContainer">
                     <div class="info-pictures">
                         <div class="logo">
-                            <img src="./assets/hook.png" alt="Construction">
+                            <img src="./assets/hook.png" alt="Computer">
                             <img src="./assets/arrow-right.png" alt=" to ">
-                            <img src="./assets/data.png" alt="">  
+                            <img src="./assets/data.png" alt="Computer">  
                         </div>
                         
                         <!--The construction-->
@@ -77,30 +79,30 @@
                 
             </div>
             <!--Education-->
-            <div id="education">
+            <div  id="education">
                 <h2 class="sectionHeader">Education</h2>               
-                <div class="certCard">
+                <div class="certCard hidden">
                     <div class="coding">
                         <div class="credit">
                             Photo by <a href="https://unsplash.com/@safarslife?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Safar Safarov</a> on <a href="https://unsplash.com/photos/koOdUvfGr4c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                         </div>
                     </div>
-                    <div class="certInfo">
-                        <p>Jan. 2023- Aug. 2025 (Expected)</p>
+                    <div class="certInfo prose">
+                        <p>Jan. 2023 - Aug. 2025 (Expected)</p>
                         <h3>Computer Programming & Analysis</h3>
                         <h3>Advanced Diploma</h3>
                         <p>SENECA COLLEGE, North York, Ontario</p>
                         <p>GPA: 3.9 / 4.0</p>
                     </div>
                 </div>
-                <div class="certCard">
+                <div class="certCard hidden">
                     <div class="constr">
                         <div class="credit">
                             Photo by <a href="https://unsplash.com/@shivendushukla?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shivendu Shukla</a> on <a href="https://unsplash.com/photos/3yoTPuYR9ZY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                         </div>
                     </div>
                     <div class="certInfo">
-                        <p>Sep. 2016- Apr. 2019</p>
+                        <p>Sep. 2016 - Apr. 2019</p>
                         <h3>Civil Engineering Technology</h3>
                         <h3>Advanced Diploma</h3>
                         <p>SENECA COLLEGE, North York, Ontario</p>
@@ -210,9 +212,11 @@
             <!--credit for the construction logo-->
             <a href="https://www.flaticon.com/free-icons/crane" title="crane icons">Crane icons created by Pause08 - Flaticon</a>
             <!--Credit for the arrow-->
-            <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by deemakdaksina - Flaticon</a>        </footer>
+            <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by deemakdaksina - Flaticon</a>        
             <!--Credit for the computer logo-->
             <a href="https://www.flaticon.com/free-icons/data" title="data icons">Data icons created by Freepik - Flaticon</a>
+        </footer>
+            
     </body>
 </html>
 

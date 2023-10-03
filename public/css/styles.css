@@ -1,8 +1,4 @@
-/* Four main colors for our design:
-    #a7efe9
-    #7fdfd4
-    #fbe1b6
-    #fbac91
+
 /*this link to use Cherry Bomb One font*/
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 body {
@@ -64,13 +60,21 @@ hr {
     border-top: 2px solid #000;
 }
 #info {
+    /* background-color: black;
+    color: white; */
     display: flex;
+    flex-flow: column wrap;
     padding: 0 10px;
+    align-items: center;
 }
 
 .phoneAboutLogo {
     display: none;
     padding-bottom: 10px;
+}
+.aboutContainer {
+    display: flex;
+    flex-flow: row;
 }    
 .info-pictures {
     position: relative;
@@ -121,9 +125,11 @@ hr {
 #info .info-text {
     padding: 0 10px;
     font-size: 110%;
-    max-width: 600px;
+    max-width: 700px;
     width: 50%;
     box-sizing: border-box;
+    display: grid;
+    align-content: center;
 }
 
 .row {
@@ -261,6 +267,25 @@ select[name="rating"] {
     margin-bottom: 0.5rem;
 }
 
+/* Scrolling Animations effect */
+main > .hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+main > .show {
+    opacity: 1;
+}
+#education > .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+#education > .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
 @media (max-width: 800px) {
     .phoneAboutLogo {
         display: flex;

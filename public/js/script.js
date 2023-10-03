@@ -1,15 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
-// Add "appear" class to element when it comes into view
-const elementToAppear = document.querySelector("main");
-window.addEventListener("scroll", () => {
-  const elementTop = elementToAppear.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
-  if (elementTop < windowHeight) {
-    elementToAppear.style.display = "block"; // Show the element
-    elementToAppear.classList.add("animate__animated", "animate__fadeIn", "animate__delay-.2s");
 
-  }
-});
 
 //wait for Hiring button is clicked
 const hiringRadio = document.getElementById('reasonH');
@@ -36,5 +25,3 @@ other.forEach(function(radio) {
     }, 750);
   });
 });
-
-}
