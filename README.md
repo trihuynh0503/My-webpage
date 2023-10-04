@@ -7,3 +7,5 @@ Some videos that help me with the effects so far:
     - For the sticky navbar: https://www.youtube.com/watch?v=6HFpw5fcaD8
     - For the scrolling animation effect: https://www.youtube.com/watch?v=T33NN_pPeNI
 
+Contact Me form Email message will be handled by formSpree
+

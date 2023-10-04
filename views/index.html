@@ -16,7 +16,7 @@
             <!--Navbar-->
             <section class="navbar">
                 <a href="#" class="navLogo">Minh Tri Huynh</a>
-                <a href="#" class="toggle-button">
+                <a class="toggle-button">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -133,7 +133,7 @@
             <!-- Contact Me Form-->
             <div id="contactMe">
                 <h2>Contact Me</h2>
-                <form class="inputForm" action="https://httpbin.org/post" method="POST">
+                <form class="inputForm" action="https://formspree.io/f/xrgwooya" method="POST">
                     <label>
                         Your Name<br>
                         <input type="text" name="name" required>
@@ -161,8 +161,8 @@
                         </div>
                     </div>
                     <label id="HourlyRateDiv">
-                        Hourly Rate
-                        <input type="text" name="hourlyRate" id="CmHourRate" disabled required>
+                        Hourly Rate 
+                        <input type="text" name="hourlyRate" id="CmHourRate" placeholder="optional" disabled>
                     </label>
                     
                     <label>
@@ -170,7 +170,9 @@
                         <textarea type="text" name="message" rows="5" required></textarea>
                     </label>
                     <button type="submit" class="link-button">Submit</button>
-                  
+                    <p style="text-align: center; font-size: 80%">*The email message will be handled by &nbsp;
+                        <a href="https://formspree.io/"> <img src="./assets/formspreeLogo.svg"
+                            width="20%" alt="formspree"></a> </p>
                 </form>
             </div>
         </main>
