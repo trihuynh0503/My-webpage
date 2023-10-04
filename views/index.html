@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
         <title>My Webpage</title>
-        <script src="js/script.js"></script>
+        <script defer src="js/script.js"></script>
         <script defer src="js/app.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <!--Add a link to connect to animate.style-->
@@ -16,15 +16,17 @@
             <!--Navbar-->
             <section class="navbar">
                 <a href="#" class="navLogo">Minh Tri Huynh</a>
-                <ul>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <ul class="navLinks">
                     <li><a href="#info">About Me</a></li>
                     <li><a href="#education">Education</a></li>
+                    <li><a href="#contactMe">Contact Me</a></li>
                 </ul>
-            </section>
-            
-            
-           
-
+            </section>          
             <!--An image of me-->
             <div>
                 <img src="/assets/kitty.png">
@@ -128,8 +130,8 @@
                 </div> 
             </div>
 
-            <!--Contact Me Form-->
-            <!-- <div id="contactMe">
+            <!-- Contact Me Form-->
+            <div id="contactMe">
                 <h2>Contact Me</h2>
                 <form class="inputForm" action="https://httpbin.org/post" method="POST">
                     <label>
@@ -140,44 +142,8 @@
                         Your Email<br>
                         <input type="email" name="email" required>
                     </label>
-                    <label>
-                        Address<br>
-                        <input type="text" name="address" required>
-                    </label>
-                    <label>
-                        City<br>
-                        <input type="text" name="city" list="city-list" autocomplete="on" required><br>
-                        <datalist id="city-list">
-                            <option value="Ottawa">
-                            <option value="Quebec City">
-                            <option value="Winnipeg">
-                            <option value="Hamilton">
-                            <option value="Kitchener">
-                            <option value="London">
-                            <option value="Victoria">
-                            <option value="Halifax">
-                            <option value="Saskatoon">
-                            <option value="Regina">
-                            <option value="St. John's">
-                            <option value="Mississauga">
-                            <option value="Toronto">
-                            <option value="Montreal">
-                            <option value="Vancouver">
-                            <option value="Calgary">
-                            <option value="Edmonton">
-                            <option value="Brampton">
-                            <option value="Markham">
-                            <option value="Vaughan">
-                            <option value="Richmond">   
-                            <option value="North York">
-                        </datalist>
-                    </label>
-                    <label>
-                        Postal Code<br>
-                        <input type="text" name="postalCode" placeholder="e.g. A0A 0A0" pattern="[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d" title="Enter a valid postal code e.g. A0A 0A0" required>
-                    </label>
                     <!--A radio buttons option-->
-                    <!--<div>
+                    <div>
                         <label>You want to contact me for:</label>
                         <div id="contactRea">
                             <label>
@@ -203,30 +169,14 @@
                         Your Messages:
                         <textarea type="text" name="message" rows="5" required></textarea>
                     </label>
-
-                    <label>
-                        Please rate my webpage (1 - 10):&nbsp
-                        <select id="rating" name="rating">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                    </label>
                     <button type="submit" class="link-button">Submit</button>
                   
                 </form>
-            </div> -->
+            </div>
         </main>
         <footer>
             <span>Attribute: </span><a  href="https://www.flaticon.com/free-icons/cat" title="cat icons">Cat icons created by Freepik - Flaticon</a>
-            <!--credit for the construction logo-->
+            <!--credit for the construction logo -->
             <a href="https://www.flaticon.com/free-icons/crane" title="crane icons">Crane icons created by Pause08 - Flaticon</a>
             <!--Credit for the arrow-->
             <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by deemakdaksina - Flaticon</a>        

@@ -8,6 +8,8 @@ body {
     margin: 0px;
     min-height: 100vh;
     font-family: 'Bree Serif', serif;
+    overflow-x: hidden;
+
 }
 header {
     min-height: 100vh;
@@ -23,7 +25,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +37,7 @@ header {
 .sticky_navbar {
     padding: 5px 50px;
     background-color: #fbac91;
+    box-sizing: border-box;
 }
 .navbar > .navLogo {
     position: relative;
@@ -48,39 +51,54 @@ header {
 .sticky_navbar > .navLogo {
     font-size: 1.7rem;
 }
-.navbar ul {
+.navbar .navLinks {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
 }
-.navbar ul li {
+.navbar .navLinks li {
     position: relative;
     list-style: none;
-    
 }
-.navbar ul li a {
+.navbar .navLinks li a:hover {
+    color: gray;
+}
+.navbar .navLinks li a {
     position: relative;
-    margin: 0 15px;
+    padding: 0 15px;
     text-decoration: none;
     color: black;
     font-size: 1.5rem;
     font-weight: bold;
     transition: 0.7s;
 }
-.sticky_navbar ul li a {
+.sticky_navbar .navLinks li a {
     font-size: 1.2rem;
+}
+
+.toggle-button {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 30px;
+    height: 21px;
+    padding: 10px 0px;
+}
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
 }
 .sectionHeader {
     margin-top: 0px;
 }
-.centered-content {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
+
 header h1 {
     margin: 0px;
 }
@@ -162,7 +180,7 @@ hr {
 
 .info-pictures > .constr-credit,
 .info-pictures > .cod-credit {
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255, 255, 255, 0.75);
     width: 50%;
     box-sizing: border-box;
     padding: 8px;
@@ -188,9 +206,6 @@ hr {
     align-content: center;
 }
 
-.row {
-    padding: 5px;
-}
 #education {
     padding: 10px; 
 }
@@ -231,12 +246,7 @@ hr {
 .credit a {
     color: rgba(255, 255, 255, 0.75);
 }
-/* .certCard:first-child > .certificate {
-    background-image: url("../assets/coding.jpg");
-}
-.certificate:first-child + {
-    background-image: url("../assets/construction.jpg");
-} */
+
 .certInfo {
     width: 100%;
     height: 100%;
@@ -347,7 +357,44 @@ main > .show {
     filter: blur(0);
     transform: translateX(0);
 }
+@media (max-width: 950px) {
+    .navbar {
+        padding: 40px 45px;
+    }
+}
 @media (max-width: 800px) {
+    /*Responsive navbar*/
+    .toggle-button {
+        display: flex;
+    }
+    .navbar .navLinks {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .navbar .navLinks.active {
+        display: flex;
+    }
+    .navbar .navLinks li a {
+        width: 100%;
+        padding: 0;
+        font-size: 1.2rem;
+    }
+    .navbar {
+        padding: 10px 50px;
+        flex-flow: row wrap; 
+    }
+    .navbar > .navLogo {
+        font-size: 1.7rem;
+    }
+    .sticky_navbar {
+        padding: 5px 25px;
+    }
+    .sticky_navbar > .navLogo {
+        font-size: 1.5rem;
+    }
+    /*Responsive photos for About Me */
     .phoneAboutLogo {
         display: flex;
         gap: 10px;
@@ -367,7 +414,18 @@ main > .show {
         width: 100%;
         max-width: 100%;
         padding: 0;
+    }  
+}
+@media (max-width: 600px) {
+    .certCard {
+        display: block;
     }
+
+    .constr,
+    .coding {
+        display: none;
+    }
+
     .phone-certBackground {
         box-shadow: 10px 5px 20px #D3D3D3;
         background-size: cover;
@@ -385,18 +443,6 @@ main > .show {
         border-radius: 25px;
         box-shadow: none;
     }
-    
-}
-@media (max-width: 600px) {
-    .certCard {
-        display: block;
-    }
-
-    .constr,
-    .coding {
-        display: none;
-    }
-
     body {
         font-size: 90%;
     }

@@ -7,10 +7,17 @@ const observer = new IntersectionObserver((entries) => {
         }
     })
 })
-
+//navbar shrinking effect when scroll down
 window.addEventListener("scroll", ()=>{
     var navbar = document.querySelector(".navbar");
     navbar.classList.toggle("sticky_navbar", window.scrollY > 0);
+})
+
+//drop down menu for navbar on phone
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const navLinks = document.getElementsByClassName('navLinks')[0];
+toggleButton.addEventListener('click', ()=>{
+    navLinks.classList.toggle('active');
 })
 
 
