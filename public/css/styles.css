@@ -1,11 +1,13 @@
 
 /*this link to use Cherry Bomb One font*/
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0px;
     min-height: 100vh;
     font-family: 'Bree Serif', serif;
-
 }
 header {
     min-height: 100vh;
@@ -16,6 +18,59 @@ header {
     margin: 0;
     text-align: center;
     padding: 20px 0px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.7s;
+    padding: 40px 100px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.sticky_navbar {
+    padding: 5px 50px;
+    background-color: #fbac91;
+}
+.navbar > .navLogo {
+    position: relative;
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.7s;
+}
+.sticky_navbar > .navLogo {
+    font-size: 1.7rem;
+}
+.navbar ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.navbar ul li {
+    position: relative;
+    list-style: none;
+    
+}
+.navbar ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.7s;
+}
+.sticky_navbar ul li a {
+    font-size: 1.2rem;
 }
 .sectionHeader {
     margin-top: 0px;
@@ -66,6 +121,7 @@ hr {
     flex-flow: column wrap;
     padding: 0 10px;
     align-items: center;
+    scroll-padding-top: cal(1.7rem + 10px);
 }
 
 .phoneAboutLogo {
@@ -183,6 +239,7 @@ hr {
 } */
 .certInfo {
     width: 100%;
+    height: 100%;
     padding: 10px;
     box-shadow: 10px 5px 20px #D3D3D3;
     box-sizing: border-box;
@@ -268,10 +325,14 @@ select[name="rating"] {
 }
 
 /* Scrolling Animations effect */
+
+
+header >.hidden,
 main > .hidden {
     opacity: 0;
     transition: all 1s;
 }
+header > .show,
 main > .show {
     opacity: 1;
 }
@@ -307,6 +368,24 @@ main > .show {
         max-width: 100%;
         padding: 0;
     }
+    .phone-certBackground {
+        box-shadow: 10px 5px 20px #D3D3D3;
+        background-size: cover;
+        padding: 10px;
+    }
+    .coding + .phone-certBackground {
+        background-image: url("../assets/ed-cod.jpg"); 
+        
+    }
+    .constr + .phone-certBackground {
+        background-image: url("../assets/ed-cons.jpg");
+    }
+    .certInfo {
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 25px;
+        box-shadow: none;
+    }
+    
 }
 @media (max-width: 600px) {
     .certCard {
