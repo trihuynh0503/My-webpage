@@ -1,19 +1,70 @@
 
 /*this link to use Cherry Bomb One font*/
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-html {
+* {
     scroll-behavior: smooth;
+    font-family: 'Bree Serif', serif;
 }
 body {
-    margin: 0px;
     min-height: 100vh;
-    font-family: 'Bree Serif', serif;
     overflow-x: hidden;
+    margin: 0px;
+} 
 
+.parallax-background {
+    position: relative;
+    height: 100vh;
+    padding: 100px;
+    overflow: hidden;
 }
+.parallax-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    z-index: -1;
+}
+.parallax-background img#light-1,
+.parallax-background img#light-2
+{
+    mix-blend-mode: screen;   
+}
+/* Scrolling Animations effect */
+.parallax-background >.hidden{
+    opacity: 0;
+    transition: all 6s;
+}
+.parallax-background > .show
+{
+    opacity: 1;
+}
+.para-intro {
+
+    /* position: absolute;
+    bottom: 150px; */
+    width: 100%;
+
+    z-index: 1;
+    text-align: center;
+    justify-content: center ;
+}
+.para-intro h1,
+.para-intro h2 {
+    text-shadow: 0 0 5px black;
+    color: white;
+}
+
+.para-links .link-button {
+    background-color: white;
+    font-family: 'Bree Serif', serif;
+}
+/* header style for the former */
 header {
+    display: none;
     min-height: 100vh;
-    display: flex;
+    
     flex-direction: column;
     justify-content: center;
     background-color: #A7EFE9;
@@ -32,24 +83,28 @@ header {
     transition: 0.7s;
     padding: 40px 100px;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 2;
 }
 .sticky_navbar {
     padding: 5px 50px;
-    background-color: #fbac91;
+    background-color: #BA73C2;
     box-sizing: border-box;
+    color: white;
 }
 .navbar > .navLogo {
     position: relative;
-    color: black;
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
     transition: 0.7s;
+    opacity: 0;
 }
 .sticky_navbar > .navLogo {
+    opacity: 1;
     font-size: 1.7rem;
+    color: white;
+    text-shadow: 0 0 5px black;
 }
 .navbar .navLinks {
     position: relative;
@@ -63,7 +118,8 @@ header {
     list-style: none;
 }
 .navbar .navLinks li a:hover {
-    color: gray;
+    color: white;
+    text-shadow: 0 0 5px black;
 }
 .navbar .navLinks li a {
     position: relative;
@@ -140,6 +196,7 @@ hr {
     padding: 0 10px;
     align-items: center;
     scroll-padding-top: cal(1.7rem + 10px);
+    background-color: white;
 }
 
 .phoneAboutLogo {
@@ -208,6 +265,7 @@ hr {
 
 #education {
     padding: 10px; 
+    z-index: 1;
 }
 .certCard {
     display: grid;
@@ -309,6 +367,7 @@ select[name="rating"] {
 
 .inputForm button[type="submit"]:hover {
     background-color: #f9865f;
+    cursor: pointer;
 } 
 .inputForm textarea {
     font-family: 'Bree Serif', serif;
@@ -335,8 +394,6 @@ select[name="rating"] {
 }
 
 /* Scrolling Animations effect */
-
-
 header >.hidden,
 main > .hidden {
     opacity: 0;
@@ -361,8 +418,18 @@ main > .show {
     .navbar {
         padding: 40px 45px;
     }
+    .sticky_navbar {
+        padding: 5px 35px; 
+    }
 }
 @media (max-width: 800px) {
+    header {
+        display: flex;
+        box-sizing: border-box;
+    }
+    .parallax-background {
+        display: none;
+    }
     /*Responsive navbar*/
     .toggle-button {
         display: flex;
@@ -390,6 +457,7 @@ main > .show {
     }
     .sticky_navbar {
         padding: 5px 25px;
+        background-color: #FBAC91;
     }
     .sticky_navbar > .navLogo {
         font-size: 1.5rem;

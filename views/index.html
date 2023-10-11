@@ -11,42 +11,70 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
     <body>
-        <!--Intro in the header-->
+         <!--Navbar-->
+        <section class="navbar">
+            <a href="#" class="navLogo">Minh Tri Huynh</a>
+            <a class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <ul class="navLinks">
+                <li><a href="#info">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contactMe">Contact Me</a></li>
+            </ul>
+        </section> 
         <header> 
-            <!--Navbar-->
-            <section class="navbar">
-                <a href="#" class="navLogo">Minh Tri Huynh</a>
-                <a class="toggle-button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </a>
-                <ul class="navLinks">
-                    <li><a href="#info">About Me</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contactMe">Contact Me</a></li>
-                </ul>
-            </section>          
-            <!--An image of me-->
+             <!--Intro in the header-->    
+            <!-- An image of me-->
             <div>
                 <img src="/assets/kitty.png">
             </div>
-            <!--A professional title you hope to get in the future-->
+            <!--A professional title you hope to get in the future -->
             <div style="display: block" class="hidden">
                 <h1 style="display: inline-block">Hi, my name is&nbsp;</h1> 
                 <h1 class="animate__animated animate__backInRight" style="display: inline-block">Minh Tri Huynh</h1> 
                 <h2>Professional Web Developer<span style="font-size: 60%;"> (Hopefully)</span></h2>
                 <h2>Welcome to my Website!</h2>
             </div>
-            <div class="links">
+            <div class="links"> 
                 <!--Resume link-->
-                <a class="link-button" href="assets/Resume.pdf" download>Resume</a>
+              <a class="link-button" href="assets/Resume.pdf" download>Resume</a>
                 <!--Contact Me link-->
-                <a class="link-button" href="#contactMe">Contact Me</a>
-            </div>
+               <a class="link-button" href="#contactMe">Contact Me</a>
+            </div>  
         </header>
+
+        <div class="parallax-background">
+            <img src="/assets/parallax/sky_01.png" id="sky">
+            <img src="/assets/parallax/sun_01.png" id="sun">
+            <img src="/assets/parallax/cloud_01.png" id="cloud">
+            <img src="/assets/parallax/sea_01.png" id="sea">
+            <img src="/assets/parallax/birds_01.png" id="birds">
+
+            <!--Intro-->
+            <div class="para-intro hidden">
+                <h1>Hi, my name is Minh Tri Huynh</h1> 
+                <h2>Professional Web Developer<span style="font-size: 60%;"> (in progress)</span></h2>
+                <h2>Welcome to my Website!</h2>
+                <div class="para-links">
+                    <!--Resume link-->
+                    <a class="link-button" href="assets/Resume.pdf" download>Resume</a>
+                    <!--Contact Me link -->
+                    <a class="link-button" href="#contactMe">Contact Me</a>
+                </div>
+            </div> 
+
+            <img src="/assets/parallax/light_01.png" id="light-1">
+            <img src="/assets/parallax/lighthouse_01.png" id="lighthouse">
+            <img src="/assets/parallax/island_01.png" id="island">
+            <img src="/assets/parallax/light_02.png" id="light-2">    
+                
+            </div>
+        
         <main>
-            <div id="info" class="hidden">
+            <div id="info">
                     <!--About Me-->
                 <h2 style="padding: 0px 10px;">About Me</h2>
                 <div class="phoneAboutLogo">
@@ -184,6 +212,9 @@
             <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by deemakdaksina - Flaticon</a>        
             <!--Credit for the computer logo-->
             <a href="https://www.flaticon.com/free-icons/data" title="data icons">Data icons created by Freepik - Flaticon</a>
+            <!--Credit for the parralax background asset-->
+            <p>Parallax background asset</p>
+            <a href="https://www.vecteezy.com/free-vector/parallax-background">Parallax Background Vectors by Vecteezy</a>
         </footer>
             
     </body>
